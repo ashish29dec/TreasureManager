@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp" >
+
+        <LinearLayout
+            android:id="@+id/id_date_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <TextView
+                android:id="@+id/id_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_date"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <DatePicker
+                android:id="@+id/id_date_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:calendarViewShown="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_name_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_date_container"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <TextView
+                android:id="@+id/id_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_name"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <AutoCompleteTextView
+                android:id="@+id/id_person_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:completionThreshold="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/id_phone_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_name_container"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <TextView
+                android:id="@+id/id_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_phone"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <AutoCompleteTextView
+                android:id="@+id/id_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:inputType="phone"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:completionThreshold="1" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/id_divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/id_phone_container"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/divider" />
+
+        <LinearLayout
+            android:id="@+id/id_dish_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_divider"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/id_add_dish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_dish_container"
+            android:layout_margin="10dp"
+            android:text="@string/str_add_dish" />
+
+        <LinearLayout
+            android:id="@+id/id_price_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_add_dish"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <TextView
+                android:id="@+id/id_label_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/str_total_price"
+                android:textAppearance="?android:attr/textAppearance" />
+
+            <TextView
+                android:id="@+id/id_total_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0.00"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/id_save_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_price_container"
+            android:layout_margin="10dp"
+            android:text="@string/str_save_order" />
+    </RelativeLayout>
+
+</ScrollView>

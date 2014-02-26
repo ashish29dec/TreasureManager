@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp" >
+    
+    <TextView 
+        android:id="@+id/id_are_you_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="@string/str_are_you_sure_you_want_to_delete" />
+
+    <TextView 
+        android:id="@+id/id_dish"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="@string/str_dish"
+        android:layout_below="@id/id_are_you_sure" />
+
+    <TextView 
+        android:id="@+id/id_dish_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@id/id_dish"
+        android:layout_below="@id/id_are_you_sure" />
+
+    <TextView 
+        android:id="@+id/id_quantity"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="@string/str_quantity"
+        android:layout_below="@id/id_dish" />
+
+    <TextView 
+        android:id="@+id/id_quantity_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@id/id_quantity"
+        android:layout_below="@id/id_dish_name" />
+
+    <TextView 
+        android:id="@+id/id_price"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:text="@string/str_price"
+        android:layout_below="@id/id_quantity" />
+
+    <TextView 
+        android:id="@+id/id_price_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:layout_toRightOf="@id/id_price"
+        android:layout_below="@id/id_quantity_value" />
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp" >
+
+    <LinearLayout
+        android:id="@+id/id_dish_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/id_dish"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_dish"
+            android:textAppearance="?android:attr/textAppearance" />
+
+        <Spinner
+            android:id="@+id/id_dish_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:tag="dish" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_quantity_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_dish_container"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/id_quantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_quantity"
+            android:textAppearance="?android:attr/textAppearance" />
+
+        <Spinner
+            android:id="@+id/id_quantity_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:tag="quantity" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_num_items_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_quantity_container"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/id_num_items"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_num_items"
+            android:textAppearance="?android:attr/textAppearance" />
+
+        <EditText
+            android:id="@+id/id_items_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:text="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/id_price_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_num_items_container"
+        android:layout_marginBottom="3dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/id_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_price"
+            android:textAppearance="?android:attr/textAppearance" />
+
+        <TextView
+            android:id="@+id/id_price_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:textAppearance="?android:attr/textAppearance"  />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/id_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_price_container"
+        android:layout_margin="5dp"
+        android:text="@string/str_delete" />
+
+    <ImageView
+        android:id="@+id/id_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/id_delete"
+        android:paddingBottom="5dp"
+        android:src="@drawable/divider" />
+
+</RelativeLayout>

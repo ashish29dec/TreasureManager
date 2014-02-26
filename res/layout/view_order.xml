@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp" >
+        
+        <LinearLayout 
+            android:id="@+id/id_date_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp" >
+            
+            <TextView 
+                android:id="@+id/id_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_date" />
+            
+            <DatePicker 
+                android:id="@+id/id_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false" />
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/id_customer_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_date_container"
+            android:orientation="vertical" >
+            
+        </LinearLayout>
+
+        <TextView 
+            android:id="@+id/id_no_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_date_container"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/str_no_order_for_this_date"
+            android:visibility="gone" />
+	</RelativeLayout>
+    
+</ScrollView>

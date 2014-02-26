@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.foodtreasure.account.treasuremanager"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:name="com.foodtreasure.account.treasuremanager.TreasureApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.foodtreasure.account.treasuremanager.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.foodtreasure.account.treasuremanager.menu.AddDishToMenuActivity" android:exported="false"></activity>
+        <activity android:name="com.foodtreasure.account.treasuremanager.menu.ViewMenuActivity" android:exported="false"></activity>
+        <activity android:name="com.foodtreasure.account.treasuremanager.menu.ModifyMenuActivity" android:exported="false"></activity>
+        <activity android:name="com.foodtreasure.account.treasuremanager.order.CreateOrderActivity" android:exported="false" android:screenOrientation="portrait"></activity>
+        <activity android:exported="false" android:name="com.foodtreasure.account.treasuremanager.order.ViewBalancesActivity"></activity>
+        <activity android:exported="false" android:name="com.foodtreasure.account.treasuremanager.order.ViewOrderActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name="com.foodtreasure.account.treasuremanager.ViewTablesActivity" android:exported="false"></activity>
+    </application>
+
+</manifest>
