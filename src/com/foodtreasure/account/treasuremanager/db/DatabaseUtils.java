@@ -160,6 +160,16 @@ public class DatabaseUtils {
 	public synchronized Cursor getTableContents(String table_name) {
 		return dbHelper.getTableContents(table_name);
 	}
+
+	/**
+	 * Returns the total payments received
+	 * @param startTime
+	 * @param endTime
+	 * @return
+	 */
+	public synchronized double getTotalPaymentsReceived(long startTime, long endTime) {
+		return dbHelper.getTotalPaymentsReceived(startTime, endTime);
+	}
 	
 	/**
 	 * Replaces the dish in question with new data passed as parameter

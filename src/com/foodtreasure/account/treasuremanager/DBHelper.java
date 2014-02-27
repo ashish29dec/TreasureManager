@@ -604,6 +604,32 @@ public class DBHelper extends SQLiteOpenHelper {
 	}
 
 	/**
+	 * Returns the total payments received within a time period
+	 * @param startTime
+	 * @param endTime
+	 * @return
+	 */
+	public double getTotalPaymentsReceived(long startTime, long endTime) {
+		double sum = 0.0d;
+		try {
+			SQLiteDatabase db = getReadableDatabase();
+			String[] col = new String[] {PaymentColoumnNames.PAYMENT};
+			String selection = PaymentColoumnNames.DATE + ">=? AND " + PaymentColoumnNames.DATE + "<=?";
+			String[] selectionArgs = new String[] {String.valueOf(startTime), String.valueOf(endTime)};
+			Cursor c = db.query(TABLE_PAYMENT, col, selection, selectionArgs, null, null, null);
+					//db.rawQuery("SELECT SUM(" + PaymentColoumnNames.PAYMENT + ") FROM " + TABLE_PAYMENT + " WHERE " + PaymentColoumnNames.DATE + "<=? AND " + PaymentColoumnNames.DATE + ">=?", selectionArgs);
+			while (c.moveToNext()) {
+				sum += Double.valueOf(c.getString(0));
+			}
+//			c.moveToFirst();
+//			sum = c.getDouble(0);
+		} catch (Throwable tr) {
+			Log.e(TAG, "Error is getting total payments received");
+		}
+		return sum;
+	}
+
+	/**
 	 * Replaces/Modifies a dish in the menu
 	 * @param replacedDish
 	 * @return

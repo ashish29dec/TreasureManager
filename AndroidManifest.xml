@@ -30,6 +30,7 @@
         <activity android:exported="false" android:name="com.foodtreasure.account.treasuremanager.order.ViewBalancesActivity"></activity>
         <activity android:exported="false" android:name="com.foodtreasure.account.treasuremanager.order.ViewOrderActivity" android:screenOrientation="portrait"></activity>
         <activity android:name="com.foodtreasure.account.treasuremanager.ViewTablesActivity" android:exported="false"></activity>
+        <activity android:name="com.foodtreasure.account.treasuremanager.ViewPaymentsActivity" android:exported="false"></activity>
     </application>
 
 </manifest>

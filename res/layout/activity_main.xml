@@ -56,11 +56,19 @@
         android:text="@string/str_modify_menu" />
     
     <Button 
-        android:id="@+id/id_view_tables"
+        android:id="@+id/id_view_payments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/id_modify_menu"
         android:layout_centerVertical="true"
+        android:text="@string/str_view_payments" />
+    
+    <Button 
+        android:id="@+id/id_view_tables"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_view_payments"
+        android:layout_centerVertical="true"
         android:text="@string/str_view_tables"
-        android:visibility="gone" />
+        android:visibility="visible" />
 </RelativeLayout>

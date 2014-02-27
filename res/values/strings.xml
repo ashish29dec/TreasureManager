@@ -39,5 +39,8 @@
     <string name="str_new_balance">New Balance is $</string>
     <string name="str_ok">OK</string>
     <string name="str_view_tables">View Tables</string>
+    <string name="str_view_payments">View Payments</string>
+    <string name="str_select_month">Select Month</string>
+    <string name="str_payments_received">Payments Received</string>
 
 </resources>
